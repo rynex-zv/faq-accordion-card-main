@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/no-js-challenge-evcrZ1wrDG)
+- Live Site URL: [live site URL](https://rynex-zv.github.io/faq-accordion-card-main/)
 
 ## My process
 
