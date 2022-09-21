@@ -1,0 +1,332 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+}
+
+main {
+  width: 919.6px;
+  height: 508.2px;
+}
+
+.FAQ {
+  position: relative;
+  display: grid;
+  grid-template: "H" minmax(auto, 13rem) "D" 0.2fr;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  height: 508.2px;
+  grid-area: faq;
+  pointer-events: none;
+}
+.FAQ h1 {
+  grid-area: H;
+  justify-self: self-start;
+  margin-bottom: -15px;
+  font-size: 2.1em;
+  color: hsl(238deg, 29%, 16%);
+}
+.FAQ .v {
+  grid-area: D;
+}
+
+.main {
+  background-color: white;
+  display: grid;
+  grid-template: "svg  . " 0.8fr "svg  faq " 1fr "svg ." 1fr/1fr 1.1fr;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: hsl(237deg, 12%, 33%) 0 5px 1rem 0rem;
+}
+
+.imges {
+  grid-area: svg;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  position: absolute;
+  z-index: 3;
+}
+
+.SVG-woman {
+  position: relative;
+  top: 6rem;
+  grid-area: svg;
+}
+
+details {
+  position: relative;
+  /* border: 1px solid #aaa;
+  border-radius: 4px; */
+  padding-bottom: 0.5rem;
+  color: hsl(240deg, 6%, 40%);
+}
+
+summary {
+  font-weight: bold;
+  margin: 0.1em -0.5em 0.5em;
+  padding: 0.5em;
+  pointer-events: auto;
+  cursor: pointer;
+  color: hsl(237deg, 12%, 33%);
+}
+
+details > summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  max-width: 350px;
+  cursor: pointer;
+  font-weight: 400;
+}
+details > summary::after {
+  transition: transform 400ms ease;
+  content: url(../images/icon-arrow-down.svg);
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+  padding-bottom: 0.5em;
+}
+
+details[open] summary {
+  font-weight: 700;
+  color: hsl(238deg, 29%, 16%);
+}
+details[open] summary::after {
+  content: url(../images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+}
+
+@media (hover: hover) {
+  .FAQ:hover summary:hover {
+    color: hsl(14deg, 88%, 65%);
+  }
+  .FAQ:hover ~ .SVG-box {
+    transform: translate(-7.7em, 8em) translate(-3em);
+    filter: drop-shadow(-0.5em 1.5em 0.9em hsl(237deg, 12%, 33%));
+  }
+}
+@media (width > 400px) {
+  .SVG-shadow {
+    position: relative;
+    transform: scaleX(2.1) scaleY(2.1) translate(-6.4em, -15em);
+    z-index: 2;
+  }
+
+  .SVG-box {
+    position: relative;
+    top: 6rem;
+    object-position: 0 20px;
+    object-fit: none;
+    transform: translate(-7.7em, 8em);
+    transition: transform 1s ease, filter 0.7s ease-out;
+    grid-area: svg;
+  }
+
+  .FAQ {
+    left: 2rem;
+  }
+
+  details > summary {
+    min-width: 350px;
+  }
+
+  .imges {
+    overflow: hidden;
+  }
+
+  img {
+    object-position: -70px;
+    object-fit: cover;
+  }
+}
+@media (width < 400px) {
+  body {
+    background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+    background-repeat: no-repeat;
+    background-size: 800px 1000px;
+  }
+  body span {
+    margin: 30px;
+  }
+
+  .SVG-box {
+    display: none;
+    visibility: hidden;
+  }
+
+  main {
+    max-width: 27.22rem;
+    min-height: fit-content;
+  }
+
+  .main {
+    background-color: white;
+    display: grid;
+    min-height: min-content;
+    height: min-content;
+    max-height: fit-content;
+    grid-template: "svg " 0.01fr "faq " 1fr " . " 0.1fr;
+    border-radius: 20px;
+    box-shadow: hsl(240deg, 6%, 40%) 0 0 8px 2px;
+  }
+
+  .FAQ {
+    position: relative;
+    display: grid;
+    grid-template: "H" 1rem "D" minmax(0.2fr, auto);
+    justify-content: space-around;
+    align-items: center;
+    max-width: 27.22rem;
+    height: min-content;
+    min-height: max-content;
+    left: initial;
+  }
+  .FAQ h1 {
+    justify-self: center;
+    margin-top: 20%;
+  }
+
+  details {
+    max-width: 270px;
+    padding: 0.5rem;
+  }
+  details > summary {
+    list-style: none;
+    display: flex;
+    min-width: initial;
+    max-width: 280px;
+    width: 280px;
+    padding: 0.5rem;
+  }
+
+  .imges {
+    bottom: 8rem;
+    position: absolute;
+    overflow: initial;
+  }
+
+  img {
+    position: absolute;
+    object-position: initial;
+    object-fit: initial;
+    z-index: 2;
+  }
+
+  .SVG-woman {
+    top: -3.8rem;
+  }
+
+  .SVG-shadow {
+    top: -7rem;
+  }
+
+  .SVG-shadow, .SVG-woman {
+    position: absolute;
+    transform: scale(0.7);
+    grid-area: svg;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
