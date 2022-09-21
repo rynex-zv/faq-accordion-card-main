@@ -47,7 +47,7 @@ Users should be able to:
 
 ### What I learned
 
--`<details>` was new to me!
+- `<details>` was new to me!
 
 - How to target outer element with CSS 
 [stackoverflow](https://stackoverflow.com/questions/49022545/hover-on-div-affects-outside-element)
@@ -64,7 +64,7 @@ Users should be able to:
         }
 ```
 
--Drop shadow for PNG or SVG image in CSS
+- Drop shadow for PNG or SVG image in CSS
 [stackoverflow](https://stackoverflow.com/questions/3186688/drop-shadow-for-png-image-in-css)
 ```css
 .SVG{
@@ -73,7 +73,7 @@ Users should be able to:
 }
 ```
 
--how to use shrink in grid
+- How to use shrink in grid
 [stackoverflow](https://stackoverflow.com/questions/19848697/css-grid-where-one-column-shrinks-to-fit-content-the-other-fills-the-remaning-s)
 ```css
 .grid {
@@ -90,7 +90,7 @@ Users should be able to:
 }
 ```
 
--How do I remove or disable old property to keep clean
+- How do I remove or disable old property to keep clean
 [stackoverflow](https://stackoverflow.com/questions/46009494/how-do-i-remove-or-disable-min-height-for-my-mobile-page)
 ```css
 .proud-of-this-css {
@@ -102,7 +102,7 @@ min-height:initial;
 
 ### Useful resources
 
-see above!
+See above!
 
 ## Author
 
